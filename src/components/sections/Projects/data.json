@@ -1,0 +1,122 @@
+[
+  {
+    "title": "GolfGuiders Admin",
+    "category": "Admin Dashboard",
+    "description": "Comprehensive admin dashboard with RBAC, user moderation, and advanced analytics for golf platform.",
+    "image": "/projects-data/Admin-panel.png",
+    "tech": ["Next.js", "TypeScript", "Tailwind", "GraphQl"],
+    "liveUrl": "",
+    "githubUrl": "#",
+    "color": "from-teal-500 to-cyan-500"
+  },
+  {
+    "title": "GolfGuiders - Web App",
+    "category": "Web Application",
+    "description": "GolfGuiders web app includes All Social Media, Guiders AI, Buddy matches, Pro Leaderboard, Local Tournament, Bag Traxx and many more features for golf enthusiasts.",
+    "image": "/projects-data/GolfGuiders-App.png",
+    "tech": ["Next.js", "TypeScript", "Tailwind", "GraphQl"],
+    "liveUrl": "http://auth.golfguiders.com/",
+    "githubUrl": "#",
+    "color": "from-green-500 to-teal-500"
+  },
+  {
+    "title": "ChatterBuddy Portal",
+    "category": "Dashboard",
+    "description": "Dedicated user dashboard with real-time user monitoring and management, RBAC implementation, Stripe Subscriptions and profile management.",
+    "image": "/projects-data/chatter-buddy-dashboard.png",
+    "tech": ["React.js", "Node.js", "Stripe", "Tailwind"],
+    "liveUrl": "https://portal.chatterbuddy.com.au/",
+    "githubUrl": "#",
+    "color": "from-cyan-500 to-blue-500"
+  },
+  {
+    "title": "LOGOS Signature Portal",
+    "category": "User and Admin Portal",
+    "description": "Enterprise-level portal system with authentication, Digital Contract creation, signing, sharing, auditing, user management, BRAC and advanced analytics.",
+    "image": "/projects-data/logos-digital-signature.png",
+    "tech": ["Next.js Full Stack", "PostgreSQL", "Next Auth", "Supabase"],
+    "liveUrl": "https://lsds-portal-system.vercel.app/auth/signin",
+    "githubUrl": "#",
+    "color": "from-indigo-500 to-purple-500"
+  },
+  {
+    "title": "PocketCoach",
+    "category": "Coaching Web App",
+    "description": "Personalized coaching platform with pretrained AI agents, Can we trained on your data too and real time chatting with coaches and AI agents.",
+    "image": "/projects-data/pocketcoach-wordpress.png",
+    "tech": ["Custom WordPress", "PHP", "AI-Integrations"],
+    "liveUrl": "https://pocketcoach.site/",
+    "githubUrl": "#",
+    "color": "from-lime-500 to-green-500"
+  },
+  {
+    "title": "Shelters - Pet Rescue Platform",
+    "category": "Full Stack",
+    "description": "Comprehensive pet shelter management and adoption platform connecting rescuers with pet lovers. Shopify store linking.",
+    "image": "/projects-data/catalyst.png",
+    "tech": ["Next.js", "Node.js", "Shopify API", "Tailwind"],
+    "liveUrl": "https://shelters.catalystpet.com/",
+    "githubUrl": "#",
+    "color": "from-purple-500 to-indigo-500"
+  },
+  {
+    "title": "Katana Inu",
+    "category": "Web3 / Crypto",
+    "description": "Decentralized crypto token platform with staking, rewards, and community features.",
+    "image": "/projects-data/katana-gaming.png",
+    "tech": ["Next.js", "Web3", "TypeScript"],
+    "liveUrl": "https://katana-inu.vercel.app/",
+    "githubUrl": "#",
+    "color": "from-amber-500 to-orange-500"
+  },
+  {
+    "title": "ChatterBuddy",
+    "category": "WordPress",
+    "description": "Professional Landing page to market Mobile application and Web Portal, explaining features and bringing traffic to these platforms.",
+    "image": "/projects-data/chatter-buddy-wordpress.png",
+    "tech": ["WordPress", "PHP", "Apper Theme"],
+    "liveUrl": "https://chatterbuddy.com.au/",
+    "githubUrl": "#",
+    "color": "from-green-500 to-emerald-500"
+  },
+  {
+    "title": "Tibit",
+    "category": "SaaS Platform",
+    "description": "Intelligent content management and distribution platform with AI-powered recommendations. Real time chatting and Video calling.",
+    "image": "/projects-data/tibit-wordpress.png",
+    "tech": ["Next.js", "TypeScript", "WordPress", "Cloud Storage"],
+    "liveUrl": "https://tibit.me/",
+    "githubUrl": "#",
+    "color": "from-fuchsia-500 to-pink-500"
+  },
+  {
+    "title": "PrimoCare",
+    "category": "Healthcare",
+    "description": "Comprehensive absentee management system connecting companies with absentee convering service provider professionals and companies",
+    "image": "/projects-data/primocare-wordpress.png",
+    "tech": ["WordPress", "Custom Plugin", "Elementor Pro"],
+    "liveUrl": "http://primocare.nl/",
+    "githubUrl": "#",
+    "color": "from-red-500 to-rose-500"
+  },
+  {
+    "title": "One's Store",
+    "category": "E-Commerce",
+    "description": "Modern multistore management platform with product catalog, store connecting and inventory management",
+    "image": "/projects-data/ones-store.png",
+    "tech": ["React.js", "Ali baba", "Shopify"],
+    "liveUrl": "https://one-s-store.vercel.app/",
+    "githubUrl": "#",
+    "color": "from-blue-500 to-cyan-500"
+  },
+  {
+    "title": "Angus Frenzy Restaurant",
+    "category": "Restaurant Web",
+    "description": "WordPress website for restaurant with menu showcase,",
+    "image": "/projects-data/resturant-wordpress.png",
+    "tech": ["PHP", "WordPress", "MySQL"],
+    "liveUrl": "http://angus-frenzy.000.pe/?i=1",
+    "githubUrl": "#",
+    "color": "from-rose-500 to-pink-500"
+  }
+]
