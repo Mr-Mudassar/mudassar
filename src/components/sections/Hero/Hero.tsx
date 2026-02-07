@@ -272,7 +272,7 @@ export function Hero() {
             </MagneticButton>
 
             <MagneticButton
-              href="/Muhammad%20Mudassar%20Resume%20-%20Full%20Stack%20Developer.pdf"
+              href="/Muhammad%20Mudassar%20Resume.pdf"
               download="Muhammad Mudassar Resume - Full Stack Developer.pdf"
               className="group px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-bold flex items-center gap-3 backdrop-blur-md transition-all hover:bg-white/10"
             >
