@@ -1,8 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Outfit, Space_Grotesk } from "next/font/google";
-import { VisualEditsMessenger } from "orchids-visual-edits";
-import { RainbowCursor } from "@/components/global/RainbowCursor";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -67,9 +65,7 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${spaceGrotesk.variable} antialiased `}
       >
-        <RainbowCursor />
         {children}
-        <VisualEditsMessenger />
       </body>
     </html>
   );

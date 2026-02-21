@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Calendar, ChevronRight, Briefcase } from "lucide-react";
+import { Building2, ChevronRight, Briefcase } from "lucide-react";
 import React from "react";
 
 const experiences = [

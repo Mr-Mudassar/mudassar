@@ -161,6 +161,7 @@ export function Footer() {
                   loop
                   muted
                   playsInline
+                  preload="none"
                   className="w-full h-full object-cover"
                 >
                   <source src="/thanks.mp4" type="video/mp4" />

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Home, User, Zap, Briefcase, FolderOpen, Award, Mail, FileText, Sparkles } from "lucide-react";
+import { Menu, X, Home, User, Zap, Briefcase, FolderOpen, Award, Mail } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#home", index: 0, icon: Home },
@@ -21,9 +21,12 @@ export function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleSectionChange = (e: any) => setActiveSection(e.detail);
-    window.addEventListener("sectionChange" as any, handleSectionChange);
-    return () => window.removeEventListener("sectionChange" as any, handleSectionChange);
+    const handleSectionChange = (event: Event) => {
+      const customEvent = event as CustomEvent<number>;
+      setActiveSection(customEvent.detail);
+    };
+    window.addEventListener("sectionChange", handleSectionChange);
+    return () => window.removeEventListener("sectionChange", handleSectionChange);
   }, []);
 
   const navigateToSection = (index: number) => {
@@ -55,7 +58,7 @@ export function Navbar() {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full blur opacity-40 group-hover:opacity-100 transition-opacity" />
               <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/10">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-150">
+                <video autoPlay loop muted playsInline preload="none" className="w-full h-full object-cover scale-150">
                   <source src="/mudassar-hello-video.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -120,7 +123,7 @@ export function Navbar() {
         <div className="glass-card rounded-[2.5rem] px-6 py-4 border border-white/5 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-150">
+                <video autoPlay loop muted playsInline preload="none" className="w-full h-full object-cover scale-150">
                     <source src="/mudassar-hello-video.mp4" type="video/mp4" />
                 </video>
             </div>

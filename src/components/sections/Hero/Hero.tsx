@@ -1,8 +1,7 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import {
-  ArrowRight,
   Github,
   Linkedin,
   Mail,
@@ -22,7 +21,7 @@ function MagneticButton({
   children: React.ReactNode;
   className?: string;
   href?: string;
-  download?: boolean;
+  download?: boolean | string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }) {
   const x = useMotionValue(0);
@@ -166,6 +165,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
+                    preload="none"
                     className="w-full h-full object-cover"
                   >
                     <source src="/mudassar-hello-video.mp4" type="video/mp4" />

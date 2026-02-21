@@ -90,6 +90,7 @@ function ProjectCard({
             src={project?.image}
             alt={project?.title}
             fill
+            sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 400px"
             className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
           />
           <div className="absolute inset-0 bg-linear-to-t from-[#0a0d17] to-transparent" />
@@ -132,6 +133,7 @@ function ProjectCard({
                 <a
                   href={project.liveUrl}
                   target="_blank"
+                  rel="noreferrer noopener"
                   className="p-2 rounded-full bg-white text-black hover:scale-110 transition-all shadow-xl"
                 >
                   <ExternalLink size={14  } />
@@ -380,6 +382,7 @@ export function Projects() {
             <a
               href="https://github.com/Mr-Mudassar"
               target="_blank"
+              rel="noreferrer noopener"
               className="group flex items-center gap-4 px-8 py-4 rounded-full border border-white/10 hover:border-white/20 transition-all"
             >
               <Github
@@ -406,6 +409,7 @@ export function Projects() {
               <a
                 href={selectedProject?.liveUrl}
                 target="_blank"
+                rel="noreferrer noopener"
                 className="p-2 rounded-full bg-white text-black hover:scale-110 transition-all shadow-xl"
               >
                 <ExternalLink size={14} />
