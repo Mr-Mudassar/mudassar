@@ -23,32 +23,32 @@ export function Contact() {
   ];
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#0a0d17]">
+    <div className="relative w-full min-h-full lg:h-full flex items-center justify-center overflow-x-hidden lg:overflow-hidden bg-[#0a0d17]">
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 blur-[120px] rounded-full" />
       </div>
 
-      <div className="container mx-auto px-6 py-12 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-12 relative z-10">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             
             {/* Left Side: Content */}
             <div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="mb-12"
+                className="mb-6 sm:mb-12"
               >
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="h-px w-12 bg-purple-500" />
                   <span className="text-purple-400 font-bold tracking-widest text-xs uppercase">Get in Touch</span>
                 </div>
-                <h2 className="text-4xl md:text-4xl font-black text-white mb-6 leading-tight">
-                  Let&apos;s Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400 text-glow md:text-6xl">Legendary.</span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight">
+                  Let&apos;s Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400 text-glow text-3xl sm:text-4xl md:text-6xl xl:text-7xl">Legendary.</span>
                 </h2>
-                <p className="text-white/40 text-lg max-w-md leading-relaxed">
+                <p className="text-white/40 text-sm sm:text-lg max-w-md leading-relaxed">
                   Whether you have a specific project in mind or just want to say hi, my inbox is always open.
                 </p>
               </motion.div>
@@ -61,10 +61,10 @@ export function Contact() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="group flex items-center gap-6 p-4 rounded-3xl hover:bg-white/5 transition-all duration-300"
+                    className="group flex items-center gap-4 sm:gap-6 p-3 sm:p-4 rounded-2xl sm:rounded-3xl hover:bg-white/5 transition-all duration-300"
                   >
-                    <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-white/40 group-hover:text-white group-hover:border-white/20 transition-all">
-                      <info.icon size={24} className={info.color} />
+                    <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white/40 group-hover:text-white group-hover:border-white/20 transition-all">
+                      <info.icon size={20} className={info.color} />
                     </div>
                     <div>
                       <p className="text-[10px] font-black text-white/30 uppercase tracking-widest mb-1">{info.label}</p>
@@ -81,8 +81,8 @@ export function Contact() {
               whileInView={{ opacity: 1, scale: 1 }}
               className="relative"
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-[2.5rem] blur-xl opacity-20" />
-              <div className="relative glass-card rounded-[2.5rem] p-10 border border-white/10">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl sm:rounded-[2.5rem] blur-xl opacity-20" />
+              <div className="relative glass-card rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-7 md:p-10 border border-white/10">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -93,7 +93,7 @@ export function Contact() {
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Doe"
                         required
-                        className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/20 focus:outline-none focus:border-purple-500/50 transition-all"
+                        className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-purple-500/50 transition-all"
                       />
                     </div>
                     <div className="space-y-2">
@@ -104,7 +104,7 @@ export function Contact() {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@example.com"
                         required
-                        className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/20 focus:outline-none focus:border-purple-500/50 transition-all"
+                        className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-purple-500/50 transition-all"
                       />
                     </div>
                   </div>
@@ -116,7 +116,7 @@ export function Contact() {
                       placeholder="Tell me about your project..."
                       rows={5}
                       required
-                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-white/20 focus:outline-none focus:border-purple-500/50 transition-all resize-none"
+                      className="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-purple-500/50 transition-all resize-none"
                     />
                   </div>
 
@@ -125,7 +125,7 @@ export function Contact() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-5 rounded-2xl bg-white text-black font-black uppercase tracking-widest text-xs flex items-center justify-center gap-3 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all disabled:opacity-50"
+                    className="w-full py-4 sm:py-5 rounded-xl sm:rounded-2xl bg-white text-black font-black uppercase tracking-widest text-xs flex items-center justify-center gap-3 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center gap-2">

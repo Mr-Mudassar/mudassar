@@ -48,11 +48,11 @@ const experiences = [
 
 export function Experience() {
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#0a0d17]">
-      <div className="container mx-auto px-6 py-12 relative z-10">
-        <div className="max-w-6xl mx-auto">
+    <div className="relative w-full min-h-full lg:h-full flex items-center justify-center overflow-x-hidden lg:overflow-hidden bg-[#0a0d17]">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-12 relative z-10">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="mb-16 text-left">
+          <div className="mb-8 sm:mb-16 text-left">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -63,7 +63,7 @@ export function Experience() {
                 Career Trajectory
               </span>
             </motion.div>
-            <h2 className="text-4xl md:text-5xl font-black text-white">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-white">
               Professional{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
                 Evolution.
@@ -72,7 +72,7 @@ export function Experience() {
           </div>
 
           {/* Timeline */}
-          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
             {/* Connecting Line (Desktop) */}
             <div className="absolute top-[23px] left-0 right-0 h-[2px] bg-white/5 hidden md:block" />
 
@@ -86,7 +86,7 @@ export function Experience() {
                 className="relative"
               >
                 {/* Visual Indicator */}
-                <div className="relative flex items-center justify-center mb-10">
+                <div className="relative flex items-center justify-center mb-4 sm:mb-10">
                   <div
                     className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${exp.color} p-[1px] shadow-2xl z-20 ${exp.current ? "bg-purple-500/20 animate-pulse" : ""}`}
                   >
@@ -101,25 +101,25 @@ export function Experience() {
 
                 {/* Card */}
                 <div
-                  className={`glass-card rounded-[2.5rem] p-8 transition-all duration-500 group ${exp.current ? "!border-1 !border-purple-500/30 hover:border-purple-500/50" : "border-white/10 hover:border-white/20"}`}
+                  className={`glass-card rounded-2xl sm:rounded-[2.5rem] p-4 sm:p-6 md:p-8 transition-all duration-500 group ${exp.current ? "!border-1 !border-purple-500/30 hover:border-purple-500/50" : "border-white/10 hover:border-white/20"}`}
                 >
                   <div className="flex flex-col gap-4">
                     <div>
                       <span className="text-[10px] font-black text-purple-400 uppercase tracking-widest mb-1 block">
                         {exp.period}
                       </span>
-                      <h3 className="text-xl font-black text-white group-hover:text-purple-400 transition-colors">
+                      <h3 className="text-base sm:text-xl font-black text-white group-hover:text-purple-400 transition-colors">
                         {exp.title}
                       </h3>
                       <div className="flex items-center gap-2 text-white/40 mt-1">
-                        <Building2 size={14} />
-                        <span className="text-sm font-bold">{exp.company}</span>
+                        <Building2 size={14} className="shrink-0" />
+                        <span className="text-xs sm:text-sm font-bold">{exp.company}</span>
                       </div>
                     </div>
 
                     <div className="h-px w-full bg-white/5" />
 
-                    <ul className="space-y-3">
+                    <ul className="space-y-2 sm:space-y-3">
                       {exp.description.map((item, i) => (
                         <li
                           key={i}

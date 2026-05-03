@@ -32,9 +32,9 @@ export function DeferredEffects() {
     const showEffects = () => setIsReady(true);
 
     if (idleApi.requestIdleCallback) {
-      idleId = idleApi.requestIdleCallback(showEffects, { timeout: 1000 });
+      idleId = idleApi.requestIdleCallback(showEffects, { timeout: 3000 });
     } else {
-      timeoutId = globalThis.setTimeout(showEffects, 500);
+      timeoutId = globalThis.setTimeout(showEffects, 2000);
     }
 
     return () => {
