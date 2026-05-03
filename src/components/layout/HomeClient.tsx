@@ -56,31 +56,31 @@ function SectionFallback({ label }: { label: string }) {
 
 export function HomeClient() {
   return (
-    <main className="bg-[#0a0d17] fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-screen max-w-400! max-h-177!">
+    <main className="bg-[#0a0d17] fixed inset-0 w-screen h-screen">
       <Navbar />
       <HorizontalScroll>
-        <section id="home" className="shrink-0 w-full h-full">
+        <section id="home" className="shrink-0 w-full min-h-full lg:h-full">
           <Hero />
         </section>
-        <section id="about" className="shrink-0 w-full h-full">
+        <section id="about" className="shrink-0 w-full min-h-full lg:h-full">
           <About />
         </section>
-        <section id="skills" className="shrink-0 w-full h-full">
+        <section id="skills" className="shrink-0 w-full min-h-full lg:h-full">
           <Skills />
         </section>
-        <section id="experience" className="shrink-0 w-full h-full">
+        <section id="experience" className="shrink-0 w-full min-h-full lg:h-full">
           <Experience />
         </section>
-        <section id="projects" className="shrink-0 w-full h-full">
+        <section id="projects" className="shrink-0 w-full min-h-full lg:h-full">
           <Projects />
         </section>
-        <section id="certifications" className="shrink-0 w-full h-full">
+        <section id="certifications" className="shrink-0 w-full min-h-full lg:h-full">
           <Certifications />
         </section>
-        <section id="contact" className="shrink-0 w-full h-full">
+        <section id="contact" className="shrink-0 w-full min-h-full lg:h-full">
           <Contact />
         </section>
-        <section id="footer" className="shrink-0 w-full h-full">
+        <section id="footer" className="shrink-0 w-full min-h-full lg:h-full">
           <Footer />
         </section>
       </HorizontalScroll>

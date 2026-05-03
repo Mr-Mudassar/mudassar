@@ -70,11 +70,11 @@ function ProjectCard({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="relative group h-100 shrink-0"
+      className="relative group h-[340px] sm:h-[400px] shrink-0"
     >
-      <div className="absolute -inset-2 bg-linear-to-r from-purple-500/20 to-blue-500/20 rounded-4xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute -inset-2 bg-linear-to-r from-purple-500/20 to-blue-500/20 rounded-3xl sm:rounded-4xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-      <div className="relative h-full glass-card rounded-4xl overflow-hidden border border-white/5 group-hover:border-white/20 transition-all duration-500">
+      <div className="relative h-full glass-card rounded-3xl sm:rounded-4xl overflow-hidden border border-white/5 group-hover:border-white/20 transition-all duration-500">
         {/* Image Section */}
         <div className="relative h-1/2 overflow-hidden">
           <button
@@ -90,14 +90,14 @@ function ProjectCard({
             src={project?.image}
             alt={project?.title}
             fill
-            sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 400px"
+            sizes="(max-width: 768px) 80vw, (max-width: 1280px) 45vw, 400px"
             className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
           />
           <div className="absolute inset-0 bg-linear-to-t from-[#0a0d17] to-transparent" />
 
-          <div className="absolute top-6 left-6">
+          <div className="absolute top-3 left-3 sm:top-6 sm:left-6">
             <span
-              className={`px-4 py-1.5 rounded-full bg-linear-to-r ${project.color} text-white text-[10px] font-bold uppercase tracking-widest shadow-lg`}
+              className={`px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-linear-to-r ${project.color} text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-widest shadow-lg`}
             >
               {project.category}
             </span>
@@ -105,24 +105,24 @@ function ProjectCard({
         </div>
 
         {/* Content Section */}
-        <div className="p-8 flex flex-col justify-between h-1/2">
+        <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-between h-1/2">
           <div>
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="text-2xl font-black text-white group-hover:text-purple-400 transition-colors">
+            <div className="flex items-center justify-between mb-2 sm:mb-3">
+              <h3 className="text-lg sm:text-2xl font-black text-white group-hover:text-purple-400 transition-colors">
                 {project.title}
               </h3>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed line-clamp-2">
+            <p className="text-white/60 text-xs sm:text-sm leading-relaxed line-clamp-2">
               {project.description}
             </p>
           </div>
 
-          <div className="flex items-center justify-between mt-6">
-            <div className="flex flex-wrap gap-2">
+          <div className="flex items-center justify-between mt-3 sm:mt-6">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {project.tech.slice(0, 3).map((t) => (
                 <span
                   key={t}
-                  className="text-[10px] font-bold text-white/40 uppercase tracking-tighter"
+                  className="text-[8px] sm:text-[10px] font-bold text-white/40 uppercase tracking-tighter"
                 >
                   {t}
                 </span>
@@ -134,12 +134,12 @@ function ProjectCard({
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="p-2 rounded-full bg-white text-black hover:scale-110 transition-all shadow-xl"
+                  className="p-1.5 sm:p-2 rounded-full bg-white text-black hover:scale-110 transition-all shadow-xl"
                 >
-                  <ExternalLink size={14  } />
+                  <ExternalLink size={12} className="sm:w-3.5 sm:h-3.5" />
                 </a>
               ) : (
-                <div className="p-2 rounded-full text-red-600 cursor-not-allowed text-xs!">
+                <div className="p-2 rounded-full text-red-600 cursor-not-allowed text-[10px] sm:text-xs!">
                   Confidential
                 </div>
               )}
@@ -223,23 +223,23 @@ export function Projects() {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#0a0d17]">
-      <div className="container mx-auto px-6 py-12 relative z-10">
-        <div className="max-w-6xl mx-auto">
+    <div className="relative w-full min-h-full lg:h-full flex items-center justify-center overflow-x-hidden lg:overflow-hidden bg-[#0a0d17]">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-12 relative z-10">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between md:mb-6 3xl:mb-10 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 md:mb-6 gap-3 sm:gap-6">
             <div className="text-left">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="flex items-center gap-3 mb-4"
+                className="flex items-center gap-3 mb-2 sm:mb-4"
               >
                 <div className="h-px w-12 bg-purple-500" />
                 <span className="text-purple-400 font-bold tracking-widest text-xs uppercase">
                   Recent Artifacts
                 </span>
               </motion.div>
-              <h2 className="text-4xl md:text-5xl font-black text-white">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-white">
                 Featured{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
                   Creations.
@@ -249,7 +249,7 @@ export function Projects() {
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-white/40 text-sm max-w-xs md:text-right"
+              className="text-white/40 text-xs sm:text-sm max-w-xs md:text-right"
             >
               A selection of high-impact projects where design meets
               engineering.
@@ -258,13 +258,13 @@ export function Projects() {
 
           {/* Carousel Container */}
           <div className="relative">
-            {/* Left Arrow */}
+            {/* Left Arrow — hidden on mobile, visible from md */}
             <motion.button
               onClick={handlePrevious}
               disabled={currentIndex === 0}
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
-              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-20 z-20 p-3 rounded-2xl bg-[#1b1530]/80 border border-purple-500/40 backdrop-blur-md transition-all shadow-[0_0_20px_rgba(168,85,247,0.25)] ${
+              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-14 z-20 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1b1530]/80 border border-purple-500/40 backdrop-blur-md transition-all shadow-[0_0_20px_rgba(168,85,247,0.25)] ${
                 currentIndex === 0
                   ? "opacity-30 cursor-not-allowed"
                   : "hover:border-purple-400/70 hover:bg-[#241a3d]/90 hover:shadow-[0_0_35px_rgba(168,85,247,0.45)]"
@@ -272,16 +272,17 @@ export function Projects() {
             >
               <ChevronLeft
                 className="text-purple-400"
-                size={28}
+                size={20}
                 strokeWidth={3}
               />
             </motion.button>
 
             {/* Carousel */}
-            <div className="relative h-[450px] flex items-center justify-center">
+            <div className="relative h-[360px] sm:h-[420px] md:h-[450px] flex items-center justify-center">
               <AnimatePresence initial={false} custom={direction} mode="sync">
                 {getVisibleProjects().map(({ project, position, index }) => {
                   const isCenter = position === "center";
+                  // Hide side cards on mobile, show them on md+
                   const offsetX =
                     position === "left" ? -360 : position === "right" ? 360 : 0;
 
@@ -298,10 +299,10 @@ export function Projects() {
                         stiffness: 300,
                         damping: 30,
                       }}
-                      className="absolute left-1/2 -translate-x-1/2"
+                      className={`absolute left-1/2 -translate-x-1/2 ${!isCenter ? "hidden md:block" : ""}`}
                       style={{
                         zIndex: isCenter ? 10 : 5,
-                        width: isCenter ? "400px" : "300px",
+                        width: isCenter ? "min(85vw, 400px)" : "300px",
                       }}
                     >
                       <motion.div
@@ -311,7 +312,7 @@ export function Projects() {
                           opacity: isCenter ? 1 : 0.4,
                         }}
                         transition={{ duration: 0.35 }}
-                        className={"cursor-pointer"}
+                        className="cursor-pointer"
                         onClick={() => {
                           if (!isCenter) {
                             setDirection(index > currentIndex ? 1 : -1);
@@ -337,7 +338,7 @@ export function Projects() {
               disabled={currentIndex === projects.length - 1}
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
-              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-20 z-20 p-3 rounded-2xl bg-[#1b1530]/80 border border-purple-500/40 backdrop-blur-md transition-all shadow-[0_0_20px_rgba(168,85,247,0.25)] ${
+              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-14 z-20 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1b1530]/80 border border-purple-500/40 backdrop-blur-md transition-all shadow-[0_0_20px_rgba(168,85,247,0.25)] ${
                 currentIndex === projects.length - 1
                   ? "opacity-30 cursor-not-allowed"
                   : "hover:border-purple-400/70 hover:bg-[#241a3d]/90 hover:shadow-[0_0_35px_rgba(168,85,247,0.45)]"
@@ -345,7 +346,7 @@ export function Projects() {
             >
               <ChevronRight
                 className="text-purple-400"
-                size={28}
+                size={20}
                 strokeWidth={3}
               />
             </motion.button>
@@ -355,7 +356,7 @@ export function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="mt-6 flex justify-center gap-3"
+            className="mt-4 sm:mt-6 flex justify-center gap-2 sm:gap-3"
           >
             {projects.map((_, index) => (
               <button
@@ -364,10 +365,10 @@ export function Projects() {
                   setDirection(index > currentIndex ? 1 : -1);
                   setCurrentIndex(index);
                 }}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "w-8 bg-gradient-to-r from-purple-500 to-indigo-500 shadow-[0_0_10px_rgba(168,85,247,0.8)]"
-                    : "w-2 bg-white/20 hover:bg-white/40"
+                    ? "w-6 sm:w-8 bg-gradient-to-r from-purple-500 to-indigo-500 shadow-[0_0_10px_rgba(168,85,247,0.8)]"
+                    : "w-1.5 sm:w-2 bg-white/20 hover:bg-white/40"
                 }`}
               />
             ))}
@@ -377,19 +378,19 @@ export function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="mt-10 flex justify-center"
+            className="mt-6 sm:mt-10 flex justify-center"
           >
             <a
               href="https://github.com/Mr-Mudassar"
               target="_blank"
               rel="noreferrer noopener"
-              className="group flex items-center gap-4 px-8 py-4 rounded-full border border-white/10 hover:border-white/20 transition-all"
+              className="group flex items-center gap-2 sm:gap-4 px-4 py-2.5 sm:px-8 sm:py-4 rounded-full border border-white/10 hover:border-white/20 transition-all"
             >
               <Github
                 className="text-white/40 group-hover:text-white transition-colors"
-                size={20}
+                size={18}
               />
-              <span className="text-white/40 group-hover:text-white font-bold text-xs uppercase tracking-widest transition-colors">
+              <span className="text-white/40 group-hover:text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest transition-colors">
                 View All Repositories
               </span>
               <div className="p-1 rounded-full bg-white/5 text-white/20 group-hover:text-white transition-colors">
@@ -401,27 +402,27 @@ export function Projects() {
       </div>
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="w-[70vw]! max-w-[70vw]! h-[80vh]! max-h-[80vh]! border border-white/10 bg-[#0a0d17] p-4 sm:p-6">
-          <div className="flex h-full flex-col gap-4">
-            <DialogTitle className="text-white text-lg font-bold flex gap-2">
+        <DialogContent className="w-[92vw] sm:w-[80vw] md:w-[70vw] max-w-[92vw] sm:max-w-[80vw] md:max-w-[70vw] h-[70vh] sm:h-[80vh] max-h-[70vh] sm:max-h-[80vh] border border-white/10 bg-[#0a0d17] p-3 sm:p-6">
+          <div className="flex h-full flex-col gap-3 sm:gap-4">
+            <DialogTitle className="text-white text-base sm:text-lg font-bold flex gap-2">
               {selectedProject?.title}
 
               <a
                 href={selectedProject?.liveUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="p-2 rounded-full bg-white text-black hover:scale-110 transition-all shadow-xl"
+                className="p-1.5 sm:p-2 rounded-full bg-white text-black hover:scale-110 transition-all shadow-xl"
               >
                 <ExternalLink size={14} />
               </a>
             </DialogTitle>
-            <div className="relative w-full flex-1 rounded-2xl overflow-hidden bg-black/30">
+            <div className="relative w-full flex-1 rounded-xl sm:rounded-2xl overflow-hidden bg-black/30">
               {selectedProject && (
                 <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 900px"
+                  sizes="(max-width: 768px) 92vw, 900px"
                   className="object-contain"
                 />
               )}

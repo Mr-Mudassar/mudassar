@@ -49,15 +49,15 @@ const education = [
 
 export function Certifications() {
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#0a0d17]">
-      <div className="container mx-auto px-6 py-12 relative z-10">
+    <div className="relative w-full min-h-full lg:h-full flex items-center justify-center overflow-x-hidden lg:overflow-hidden bg-[#0a0d17]">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-12 relative z-10">
         
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 lg:gap-16">
             
             {/* Certifications Side */}
             <div>
-              <div className="mb-10 text-left">
+              <div className="mb-6 sm:mb-10 text-left">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +66,7 @@ export function Certifications() {
                   <div className="h-px w-12 bg-purple-500" />
                   <span className="text-purple-400 font-bold tracking-widest text-xs uppercase">Verification</span>
                 </motion.div>
-                <h2 className="text-3xl md:text-4xl font-black text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-black text-white">
                   Badges of <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Honor.</span>
                 </h2>
               </div>
@@ -80,13 +80,13 @@ export function Certifications() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.02 }}
-                    className="group glass-card p-6 rounded-3xl border border-white/5 hover:border-white/20 transition-all flex items-center gap-6"
+                    className="group glass-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/5 hover:border-white/20 transition-all flex items-center gap-4 sm:gap-6"
                   >
-                    <div className={`p-4 rounded-2xl bg-gradient-to-br ${cert.color} text-white shadow-xl group-hover:rotate-12 transition-transform`}>
-                      <cert.icon size={24} />
+                    <div className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${cert.color} text-white shadow-xl group-hover:rotate-12 transition-transform`}>
+                      <cert.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">{cert.title}</h3>
+                      <h3 className="text-sm sm:text-lg font-bold text-white group-hover:text-purple-400 transition-colors">{cert.title}</h3>
                       <p className="text-white/40 text-xs font-bold uppercase tracking-wider">{cert.issuer} • {cert.date}</p>
                     </div>
                     <div className="p-2 rounded-full bg-white/5 text-white/20 group-hover:text-white transition-colors">
@@ -99,7 +99,7 @@ export function Certifications() {
 
             {/* Education Side */}
             <div>
-              <div className="mb-10 text-left">
+              <div className="mb-6 sm:mb-10 text-left">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ export function Certifications() {
                   <div className="h-px w-12 bg-blue-500" />
                   <span className="text-blue-400 font-bold tracking-widest text-xs uppercase">Academic</span>
                 </motion.div>
-                <h2 className="text-3xl md:text-4xl font-black text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-black text-white">
                   The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Foundation.</span>
                 </h2>
               </div>
@@ -121,19 +121,19 @@ export function Certifications() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="relative pl-10"
+                    className="relative pl-8 sm:pl-10"
                   >
                     {/* Timeline Line */}
                     <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-white/5" />
                     <div className={`absolute left-[-5px] top-6 w-3 h-3 rounded-full bg-gradient-to-br ${edu.color} shadow-lg`} />
 
-                    <div className="glass-card p-8 rounded-[2.5rem] border border-white/5 hover:border-white/20 transition-all group">
+                    <div className="glass-card p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-[2.5rem] border border-white/5 hover:border-white/20 transition-all group">
                       <div className="flex items-center gap-4 mb-4">
                         <div className={`p-3 rounded-xl bg-gradient-to-br ${edu.color} text-white`}>
                           <edu.icon size={20} />
                         </div>
                         <div>
-                          <h3 className="text-xl font-black text-white group-hover:text-blue-400 transition-colors">{edu.degree}</h3>
+                          <h3 className="text-base sm:text-xl font-black text-white group-hover:text-blue-400 transition-colors">{edu.degree}</h3>
                           <p className="text-blue-400/60 text-xs font-bold uppercase tracking-widest">{edu?.period}</p>
                         </div>
                       </div>

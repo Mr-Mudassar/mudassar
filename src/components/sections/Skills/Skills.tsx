@@ -72,7 +72,7 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-transparent">
+    <div className="relative w-full min-h-full lg:h-full flex items-center justify-center overflow-x-hidden lg:overflow-hidden bg-transparent">
       <div className="absolute inset-0">
         <svg className="absolute inset-0 w-full h-full opacity-5">
           <defs>
@@ -123,7 +123,7 @@ export function Skills() {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 py-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 py-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -143,7 +143,7 @@ export function Skills() {
               My Arsenal
             </span>
           </motion.div>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold">
             <span className="text-white">Skills & </span>
             <span className="bg-gradient-to-r from-[#a855f7] via-[#c084fc] to-[#06b6d4] bg-clip-text text-transparent">
               Technologies
@@ -151,7 +151,7 @@ export function Skills() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-3 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3 xl:gap-4 max-w-7xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -169,7 +169,7 @@ export function Skills() {
                 }}
               />
 
-              <div className="relative bg-[#0f1629]/80 backdrop-blur-xl rounded-2xl p-4 border border-white/10 group-hover:border-white/20 transition-all duration-300 overflow-hidden">
+              <div className="relative bg-[#0f1629]/80 backdrop-blur-xl rounded-2xl p-3 sm:p-4 border border-white/10 group-hover:border-white/20 transition-all duration-300 overflow-hidden">
                 <motion.div
                   className="absolute top-0 right-0 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity"
                   style={{
@@ -194,14 +194,12 @@ export function Skills() {
                       />
                     </motion.div>
                     <div>
-                      <h3 className="text-lg font-bold text-white">
+                      <h3 className="text-sm sm:text-lg xl:text-xl font-bold text-white">
                         {category.title}
                       </h3>
                       <div className="flex items-center gap-1">
-                        <motion.div
-                          animate={{ scale: [1, 1.5, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                          className="w-1.5 h-1.5 rounded-full"
+                        <div
+                          className="w-1.5 h-1.5 rounded-full animate-pulse"
                           style={{ backgroundColor: category.color }}
                         />
                         <span className="text-xs text-white/50">
@@ -227,7 +225,7 @@ export function Skills() {
                         className="group/skill py-1"
                       >
                         <div className="flex items-center justify-between mb-0.5">
-                          <span className="font-bold text-md text-white/80 group-hover/skill:text-white transition-colors truncate">
+                          <span className="font-bold text-xs sm:text-sm text-white/80 group-hover/skill:text-white transition-colors truncate">
                             {skill.name}
                           </span>
                           <span
@@ -237,7 +235,7 @@ export function Skills() {
                             {skill.level}%
                           </span>
                         </div>
-                        <div className="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <div className="h-1.5 sm:h-2 bg-white/5 rounded-full overflow-hidden">
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: `${skill.level}%` }}
@@ -247,24 +245,11 @@ export function Skills() {
                               ease: "easeOut",
                             }}
                             viewport={{ once: true }}
-                            className="h-full rounded-full relative"
+                            className="h-full rounded-full"
                             style={{
                               background: `linear-gradient(90deg, ${category.color}80, ${category.color})`,
                             }}
-                          >
-                            <motion.div
-                              animate={{ x: ["-100%", "200%"] }}
-                              transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                delay: skillIndex * 0.2,
-                              }}
-                              className="absolute inset-0 w-1/3"
-                              style={{
-                                background: `linear-gradient(90deg, transparent, ${category.color}80, transparent)`,
-                              }}
-                            />
-                          </motion.div>
+                          />
                         </div>
                       </motion.div>
                     ))}
